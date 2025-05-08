@@ -1,34 +1,22 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Next.js プロジェクトを作成するための情報を取得しました。このプロジェクトは、React ベースのフレームワークを使用してサーバーレンダリングされた Web アプリケーションを構築するためのものです。
 
-## Getting Started
+以下のコマンドを使用して、Docker で動作する最小の Next.js プロジェクトを作成します。
 
-First, run the development server:
+このコマンドは、JavaScript を使用し、空のプロジェクトを初期化します。その後、Docker 用の設定を追加します。
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+次に、このコマンドを実行してプロジェクトを作成します。
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Next.js プロジェクトの作成が完了しました。プロジェクトは正常に初期化され、必要な依存関係がインストールされました。また、Git リポジトリも初期化されています。
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+次に、Docker で動作するように設定を追加します。Dockerfile と docker-compose.yml を作成し、必要な設定を行います。
 
-## Learn More
+Dockerfile
+docker-compose.yml
+Dockerfile と docker-compose.yml の作成が完了しました。これで、Next.js プロジェクトを Docker コンテナで動作させる準備が整いました。
 
-To learn more about Next.js, take a look at the following resources:
+次に、以下の手順で Docker コンテナを起動できます。
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Docker デーモンが起動していることを確認してください。
+以下のコマンドを実行して、Docker イメージをビルドします:
+以下のコマンドを実行して、コンテナを起動します:
+これで、ブラウザで http://localhost:3000 にアクセスすると、Next.js アプリケーションが表示されるはずです。
