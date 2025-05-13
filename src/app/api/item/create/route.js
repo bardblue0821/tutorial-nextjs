@@ -1,6 +1,18 @@
-import {NextResponse} from 'next/server';
+import { NextResponse } from "next/server"
+import connectDB from "@/utils/database"
+import { ItemModel } from "@/utils/schemaModels";
 
-export async function POST(request) {
-    console.log(await request.json());
-    return NextResponse.json({message: 'Create an item!!!'});
+export async function POST(request){
+    const reqBody = await request.json();
+    console.log(reqBody);
+    
+    try {
+        await connectDB();
+        await ItemModel.create(reqBody);
+        return NextResponse.json({message: "アイテム作成成功"})
+    } catch {
+        return NextResponse.json({message: "アイテム作成失敗"})
+    }
+    
+    
 }
