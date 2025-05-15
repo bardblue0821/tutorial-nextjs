@@ -11,7 +11,7 @@ export async function POST(request) {
         console.log('Saved User Data:', savedUserData);
         if (savedUserData) {
             if (reqBody.password === savedUserData.password) {
-                const secretKey = new TextEncoder().encode('next-market-app-booku');
+                const secretKey = new TextEncoder().encode('next-market-app-book');
                 const payload = {
                     email: reqBody.email,
                 }
