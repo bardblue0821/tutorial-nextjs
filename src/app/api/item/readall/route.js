@@ -12,3 +12,4 @@ export async function GET(request) {
     }
 }
 
+export const revaridate = 0;
