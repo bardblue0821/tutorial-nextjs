@@ -6,9 +6,14 @@ export async function PUT(request, context) {
     const reqBody = await request.json();
     try {
         await connectDB();
+        const singleItem = await ItemModel.findById(context.params.id);
         const { id } = await context.params;
-        await ItemModel.updateOne({ _id: id }, reqBody);
-        return NextResponse.json({message: "update success"});
+        if (singleItem.email === reqBody.email) {
+            await ItemModel.updateOne({ _id: id }, reqBody);    
+            return NextResponse.json({message: "update success"});
+        } else {
+            return NextResponse.json({message: "update failed"});
+        }
     } catch {
         return NextResponse.json({message: "update failed"});
     }
