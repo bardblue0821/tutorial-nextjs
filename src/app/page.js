@@ -23,7 +23,8 @@ const ReadAllItems = async() => {
         <div>
             <h1>Read All Items</h1>
             {allItems.map(item => 
-                <Link href="" key={item._id}>
+                // href は JSX で記述され（｛｝を使う）、その中に JS の記法がある（`${}`を使う）
+                <Link href={`/item/readsingle/${item._id}`} key={item._id}>  
                     <Image src={item.image} width={750} height={500} alt={item.title} priority/>
                     <div>
                         <h2>{item.price}</h2>
